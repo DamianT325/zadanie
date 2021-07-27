@@ -15,8 +15,8 @@ button.addEventListener('click', e => {
     if(!validateEmail(email.value)){
         alert('Check your email!')
     }
-    else if(formMsg.value.length > 60){
-        alert("Message must be less than 60 characters");
+    else if(formMsg.value.length > 60 || formMsg.value == 0){
+        alert("Message must be less than 60 characters and cant be blank");
     }else{
         form.remove();
         thx.classList.remove('hidden')
