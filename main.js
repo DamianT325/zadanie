@@ -12,8 +12,11 @@ function validateEmail(email) {
 
 button.addEventListener('click', e => {
     e.preventDefault();
+    if(form.value == null){
+        alert('You must fill form correctly')
+    }
     if(!validateEmail(email.value)){
-        alert('Check your email!')
+        alert('Check your email or name')
     }
     else if(formMsg.value.length > 60 || formMsg.value == 0){
         alert("Message must be less than 60 characters and cant be blank");
